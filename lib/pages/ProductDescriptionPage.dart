@@ -23,6 +23,7 @@ class _ProductDescriptionState extends State<ProductDescription> {
   Widget build(BuildContext context) {
     futureProduct = widget.services.fetchOneProduct(widget.id);
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text("Product Details"),
       ),
