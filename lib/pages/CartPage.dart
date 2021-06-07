@@ -63,6 +63,19 @@ class _CartState extends State<Cart> {
                               height: 50,
                               width: 40,
                             ),
+                            subtitle: Padding(
+                              padding: const EdgeInsets.only(top: 8.0),
+                              child: Text(
+                                "\$ " +
+                                    snapshot.data
+                                        .elementAt(index)
+                                        .price
+                                        .toString(),
+                                style: TextStyle(
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ),
                             trailing: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
@@ -136,7 +149,7 @@ class _CartState extends State<Cart> {
                         },
                         separatorBuilder: (BuildContext context, int index) {
                           return SizedBox(
-                            height: 5,
+                            height: 10,
                           );
                         },
                       ),
